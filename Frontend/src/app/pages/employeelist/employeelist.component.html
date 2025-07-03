@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee List</title>
+</head>
+<body>
+  <h1>Employee List</h1>
+  <h2>Employees</h2>
+
+  <div class="employee-list-container">
+    <button class="add-btn" (click)="addEmployee()">➕ Add Employee</button>
+    <br><br>
+
+    <div *ngFor="let e of employee" class="employee-card">
+      <div class="employee-info">
+        <p><strong>Id</strong> {{e.id}} </p>
+        <p><strong>👤 Employee Name:</strong> {{ e.name }}</p>
+        <p><strong>🏢 Department:</strong> {{ e.dept }}</p>
+      </div>
+      <div class="button-group">
+        <button class="edit-btn" (click)="editEmployee(e.id!)">✏️ Edit</button>
+        <button class="delete-btn" (click)="deleteEmployee(e.id!)">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

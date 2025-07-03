@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="form-container">
+  <h2 class="form-title">{{ id ? 'Edit' : 'Add' }} Student</h2>
+
+  <form class="animated-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input formControlName="name" placeholder="Name" required />
+      
+    </div>
+
+    <div class="form-group">
+      <input formControlName="dept" placeholder="Department" required />
+      
+    </div>
+
+    <button type="submit" class="submit-btn">💾 Save</button>
+  </form>
+</div>
+
+</body>
+</html>
